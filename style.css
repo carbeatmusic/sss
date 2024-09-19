@@ -1,0 +1,78 @@
+/* Стили для карточек товаров */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(33.333% - 40px); /* Три карточки в ряд */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+}
+
+.card .price-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card .price {
+    font-size: 18px;
+    color: #333;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card .price-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card .price {
+        margin-bottom: 10px;
+    }
+}
